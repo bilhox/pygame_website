@@ -1,0 +1,15 @@
+:root{
+
+    --body-background: #aaeebb;
+    --font-color: "black";
+    --module-title-color: rgb(81, 99, 81);
+    --module-member-title-color: rgb(145, 120, 55);
+    --f-title-container-background: #77a783;
+    --code-member-color:#77a783;
+    --non-code-member-color: #eeffcc;
+    --f-documentation-color: #88be96;
+    --f-documentation-box-shadow: 0px 0px 30px #88be96;
+    --kbd-background: #c4f3cf;
+    --kbd-border: #b4b4b4;
+    --kbd-font-color: "black";
+}

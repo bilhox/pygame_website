@@ -10,8 +10,8 @@ body{
     font-size: 100%;
     font-family: inherit;
     vertical-align: baseline;
-    background-color: #1E1E1E;
-    color: white;
+    background-color: var(--body-background);
+    color: var(--font-color);
     font-family: 'Geologica';
 }
 
@@ -26,7 +26,7 @@ body{
 
 #module-title{
     padding: 20px 0px;
-    border-bottom: rgb(188, 231, 190) 1px solid;
+    border-bottom: var(--module-title-color) 1px solid;
 }
 
 .module-members{
@@ -35,7 +35,7 @@ body{
 
 .module-members h3{
     padding: 15px 0px;
-    border-bottom: rgb(231, 219, 188) 1px solid;
+    border-bottom: var(--module-member-title-color) 1px solid;
 }
 
 .module-members > ul > li{
@@ -46,7 +46,7 @@ body{
 
 .module-members ul li code a{
     text-decoration: none;
-    color: white;
+    color: var(--font-color);
     animation-duration: 200ms;
 }
 
@@ -62,13 +62,13 @@ body{
 .module-documentation{
     margin: 50px 0px;
     padding: 20px;
-    background-color: #2b2b2c;
+    background-color: var(--f-documentation-color);
     border-radius: 40px 10px;
-    box-shadow: 0px 0px 30px #2b2b2c;
+    box-shadow: var(--f-documentation-box-shadow);
 }
 
 .module-documentation code{
-    background-color: #121212;
+    background-color: var(--non-code-member-color);
     border-radius: 5px;
     padding: 1px 3px;
     font-size: 14px;
@@ -76,9 +76,9 @@ body{
 
 .f-documentation{
     margin: 2em 0em;
-    background-color: #2b2b2c;
+    background-color: var(--f-documentation-color);
     border-radius: 40px 10px;
-    box-shadow: 0px 0px 30px #2b2b2c;
+    box-shadow: var(--f-documentation-box-shadow);
 }
 
 .f-desc{
@@ -87,7 +87,7 @@ body{
 }
 
 .f-desc code{
-    background-color: #1E1E1E;
+    background-color: var(--non-code-member-color);
     border-radius: 2px;
     padding: 1px 3px;
 }
@@ -98,11 +98,14 @@ body{
 
 .f-doctype{
     font-size: 15px;
+    padding: 1px 3px;
+    border-radius: 4px;
+    background-color: var(--non-code-member-color);
 }
 
 .f-title-container{
     padding: 20px;
-    background-color: #252526;
+    background-color: var(--f-title-container-background);
     border-radius: 40px 10px 0px 0px;
 }
 
@@ -120,12 +123,13 @@ body{
 
 .f-title-container code{
     font-size: 20px;
+    background-color: var(--code-member-color);
 }
 
 kbd {
-    background-color: #323131;
+    background-color: var(--kbd-background);
     border-radius: 3px;
-    border: 1px solid #b4b4b4;
+    border: 1px solid var(--kbd-border);
     color: #333;
     display: inline-block;
     font-size: 0.85em;
@@ -133,6 +137,6 @@ kbd {
     padding: 3px 8px;
     white-space: nowrap;
     font-size: 20px;
-    color: white;
+    color: var(--kbd-font-color);
 }
 

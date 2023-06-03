@@ -1,0 +1,15 @@
+:root{
+
+    --body-background: #1E1E1E;
+    --font-color: "white";
+    --module-title-color: rgb(188, 231, 190);
+    --module-member-title-color: rgb(231, 219, 188);
+    --f-title-container-background: #252526;
+    --code-member-color: #252526;
+    --non-code-member-color: #121212;
+    --f-documentation-color: #2b2b2c;
+    --f-documentation-box-shadow: 0px 0px 30px #2b2b2c;
+    --kbd-background: #323131;
+    --kbd-border: #b4b4b4;
+    --kbd-font-color: "white";
+}
