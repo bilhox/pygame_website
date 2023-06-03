@@ -20,45 +20,41 @@ body{
     margin: 5% 20%;
 }
 
-#module-title{
+#module-desc{
     margin-bottom: 50px;
 }
 
-#module-title h1{
+#module-title{
     padding: 20px 0px;
     border-bottom: rgb(188, 231, 190) 1px solid;
 }
 
-.module-desc{
-    font-size: 16px;
-}
-
-.members{
+.module-members{
     line-height: 130%;
 }
 
-.members h3{
+.module-members h3{
     padding: 15px 0px;
     border-bottom: rgb(231, 219, 188) 1px solid;
 }
 
-.members > ul > li{
+.module-members > ul > li{
     list-style-type: circle;
     margin: 10px 0px;
     font-size: 17px;
 }
 
-.members > ul > li > code > a{
+.module-members ul li code a{
     text-decoration: none;
     color: white;
     animation-duration: 200ms;
 }
 
-.members > ul > li > code > a:hover{
+.module-members > ul > li > code > a:hover{
     font-weight: bolder;
 }
 
-.members > ul > li > ul > li{
+.module-members > ul > li > ul > li{
     list-style-type: square;
     font-size: 15px;
 }

@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="func_docs.css">
     <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>
-    hljs.highlightAll();
-    
-    </script>
+      <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script defer src="script.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <div id="module-display">
-        <div id="module-title">
-            <h1>
+        <button onclick="changeTheme()">Change theme</button>
+        <div id="module-desc">
+            <h1 id="module-title">
                 pygame.display
             </h1>
             <p>
                 pygame module to control the display window and screen
             </p>
         </div>
-        <div class="members">
-            <h3>Module members</h3>
+        <div class="module-members">
+            <h3 id="module-members-title">Module members</h3>
             <ul>
                 <li><code><a href="func_docs.html#pygame.display.quit">pygame.display.quit()</a></code>
                     <ul><li>Uninitialize the display module</li></ul>
@@ -57,7 +57,7 @@
         </div>
         <div class="f-documentation">
             <div class="f-title-container" id="pygame.display.quit">
-                <code>
+                <code class="member-code">
                     pygame.display.quit()
                 </code>
                 <div class="f-tags">
@@ -79,7 +79,7 @@
 
         <div class="f-documentation">
             <div class="f-title-container" id="pygame.display.set_mode">
-                <code>
+                <code class="member-code">
                     pygame.display.set_mode()
                 </code>
             </div>
