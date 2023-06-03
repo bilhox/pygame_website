@@ -1,8 +1,16 @@
 hljs.highlightAll();
+
 var theme = "dark";
+
+const dark_theme = "//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css";
+const light_theme = "//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css";
+
 function changeTheme(){
     if(theme == "dark"){
         theme = "white";
+
+        document.getElementById("theme").setAttribute("href", light_theme);
+
         document.body.style.backgroundColor = "#aaeebb";
         document.body.style.color = "black";
         var elements = document.getElementsByTagName("a");
@@ -54,6 +62,9 @@ function changeTheme(){
 
     } else {
         theme = "dark";
+
+        document.getElementById("theme").setAttribute("href", dark_theme);
+
         document.body.style.backgroundColor = "#1E1E1E";
         document.body.style.color = "white";
 
