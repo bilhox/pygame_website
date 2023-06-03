@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    background-color: #1E1E1E;
+    color: white;
+    font-family: 'Geologica';
+}
+
+#module-display{
+    display: block;
+    margin: 5% 20%;
+}
+
+#module-title{
+    margin-bottom: 50px;
+}
+
+#module-title h1{
+    padding: 20px 0px;
+    border-bottom: rgb(188, 231, 190) 1px solid;
+}
+
+.module-desc{
+    font-size: 16px;
+}
+
+.members{
+    line-height: 130%;
+}
+
+.members h3{
+    padding: 15px 0px;
+    border-bottom: rgb(231, 219, 188) 1px solid;
+}
+
+.members > ul > li{
+    list-style-type: circle;
+    margin: 10px 0px;
+    font-size: 17px;
+}
+
+.members > ul > li > code > a{
+    text-decoration: none;
+    color: white;
+    animation-duration: 200ms;
+}
+
+.members > ul > li > code > a:hover{
+    font-weight: bolder;
+}
+
+.members > ul > li > ul > li{
+    list-style-type: square;
+    font-size: 15px;
+}
+
+.module-documentation{
+    margin: 50px 0px;
+    padding: 20px;
+    background-color: #2b2b2c;
+    border-radius: 40px 10px;
+    box-shadow: 0px 0px 30px #2b2b2c;
+}
+
+.module-documentation code{
+    background-color: #121212;
+    border-radius: 5px;
+    padding: 1px 3px;
+    font-size: 14px;
+}
+
+.f-documentation{
+    margin: 2em 0em;
+    background-color: #2b2b2c;
+    border-radius: 40px 10px;
+    box-shadow: 0px 0px 30px #2b2b2c;
+}
+
+.f-desc{
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.f-desc code{
+    background-color: #1E1E1E;
+    border-radius: 2px;
+    padding: 1px 3px;
+}
+
+.f-description{
+    padding: 10px 20px;
+}
+
+.f-doctype{
+    font-size: 15px;
+}
+
+.f-title-container{
+    padding: 20px;
+    background-color: #252526;
+    border-radius: 40px 10px 0px 0px;
+}
+
+.f-tags{
+    margin-top: 10px;
+}
+
+.f-tags kbd{
+    margin: 0px 2px;
+}
+
+.f-short-documentation {
+    letter-spacing: 1px;
+}
+
+.f-title-container code{
+    font-size: 20px;
+}
+
+kbd {
+    background-color: #323131;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    color: #333;
+    display: inline-block;
+    font-size: 0.85em;
+    line-height: 1;
+    padding: 3px 8px;
+    white-space: nowrap;
+    font-size: 20px;
+    color: white;
+}
+

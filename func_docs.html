@@ -1,0 +1,203 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="func_docs.css">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+    hljs.highlightAll();
+    
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="module-display">
+        <div id="module-title">
+            <h1>
+                pygame.display
+            </h1>
+            <p>
+                pygame module to control the display window and screen
+            </p>
+        </div>
+        <div class="members">
+            <h3>Module members</h3>
+            <ul>
+                <li><code><a href="func_docs.html#pygame.display.quit">pygame.display.quit()</a></code>
+                    <ul><li>Uninitialize the display module</li></ul>
+                </li>
+                <li><code><a href="func_docs.html#pygame.display.set_mode">pygame.display.set_mode()</a></code>
+                    <ul><li>Initialize a window or screen for display</li></ul>
+                </li>
+            </ul>
+        </div>
+        <div class="module-documentation">
+            <p>This module offers control over the pygame display. Pygame has a single display Surface that is either contained in a window or runs full screen. Once you create the display you treat it as a regular Surface. Changes are not immediately visible onscreen; you must choose one of the two flipping functions to update the actual display.</p>
+
+            <p>The origin of the display, where <code>x = 0</code> and <code>y = 0</code>, is the top left of the screen. Both axes increase positively towards the bottom right of the screen.</p>
+
+            <p>The pygame display can actually be initialized in one of several modes. By default, the display is a basic software driven framebuffer. You can request special modules like automatic scaling or OpenGL support. These are controlled by flags passed to <code>pygame.display.set_mode()</code>.</p>
+
+            <p>Pygame can only have a single display active at any time. Creating a new one with <code>pygame.display.set_mode()</code> will close the previous display. To detect the number and size of attached screens, you can use <code>pygame.display.get_desktop_sizes</code> and then select appropriate window size and display index to pass to <code>pygame.display.set_mode()</code>.</p>
+
+            <p>For backward compatibility pygame.display allows precise control over the pixel format or display resolutions. This used to be necessary with old graphics cards and CRT screens, but is usually not needed any more. Use the functions <code>pygame.display.mode_ok()</code>,<code>pygame.display.list_modes()</code>, and <code>pygame.display.Info()</code> to query detailed information about the display.</p>
+
+            <p>Once the display Surface is created, the functions from this module affect the single existing display. The Surface becomes invalid if the module is uninitialized. If a new display mode is set, the existing Surface will automatically switch to operate on the new display.</p>
+
+            <p>When the display mode is set, several events are placed on the pygame event queue. <code>pygame.QUIT</code> is sent when the user has requested the program to shut down. The window will receive <code>pygame.ACTIVEEVENT</code> events as the display gains and loses input focus. If the display is set with the <code>pygame.RESIZABLE</code> flag, <code>pygame.VIDEORESIZE</code> events will be sent when the user adjusts the window dimensions. Hardware displays that draw direct to the screen will get <code>pygame.VIDEOEXPOSE</code> events when portions of the window must be redrawn.</p>
+
+            <p>A new windowevent API was introduced in pygame 2.0.1. Check event module docs for more information on that.</p>
+
+            <p>Some display environments have an option for automatically stretching all windows. When this option is enabled, this automatic stretching distorts the appearance of the pygame window. In the pygame examples directory, there is example code (<code>prevent_display_stretching.py</code>) which shows how to disable this automatic stretching of the pygame display on Microsoft Windows (Vista or newer required).</p>
+        </div>
+        <div class="f-documentation">
+            <div class="f-title-container" id="pygame.display.quit">
+                <code>
+                    pygame.display.quit()
+                </code>
+                <div class="f-tags">
+                    <kbd>Deprecated</kbd>
+                    <kbd>New</kbd>
+                    <kbd>Updated</kbd>
+                </div>
+            </div>
+            <div class="f-description">
+                <p class="f-short-description"><strong>Uninitialize the display module</strong></p>
+                <code class="f-doctype">quit() -> None</code>
+                <div class="f-desc">
+                    <p>This will shut down the entire display module. This means any active displays will be closed.
+                        This will also be handled automatically when the program exits.</p>
+                    <p>It is harmless to call this more than once, repeated calls have no effect.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="f-documentation">
+            <div class="f-title-container" id="pygame.display.set_mode">
+                <code>
+                    pygame.display.set_mode()
+                </code>
+            </div>
+            <div class="f-description">
+                <p class="f-short-description"><strong>Initialize a window or screen for display</strong></p>
+                <code class="f-doctype">set_mode(size=(0, 0), flags=0, depth=0, display=0, vsync=0) -> Surface</code>
+                <div class="f-desc">
+                    <p> This will create a window or display output and return a display Surface. The arguments passed
+                        in are requests for a display type. The actual created display will be the best possible match
+                        supported by the system.</p>
+
+                    <p>Note that calling this function implicitly initializes <code>pygame.display</code>, if it was not
+                        initialized before.</p>
+
+                    <p>The size argument is a pair of numbers representing the width and height. The flags argument is a
+                        collection of additional options. The depth argument represents the number of bits to use for
+                        color.</p>
+
+                    <p>The Surface that gets returned can be drawn to like a regular Surface but changes will eventually
+                        be seen on the monitor.</p>
+
+                    <p>If no size is passed or is set to <code>(0, 0)</code>, the created Surface will have the same
+                        size as the current screen resolution. If only the width or height are set to <code>0</code>,
+                        the Surface will have the same width or height as the screen resolution.</p>
+
+                    <p>It is usually best to not pass the depth argument. It will default to the best and fastest color
+                        depth for the system. If your game requires a specific color format you can control the depth
+                        with this argument. Pygame will emulate an unavailable color depth which can be slow.</p>
+
+                    <p>When requesting fullscreen display modes, sometimes an exact match for the requested size cannot
+                        be made. In these situations pygame will select the closest compatible match. The returned
+                        surface will still always match the requested size.</p>
+
+                    <p>On high resolution displays <code>(4k, 1080p)</code> and tiny graphics games <code>640x480</code>
+                        show up very small so that they are unplayable. <code>SCALED</code> scales up the window for
+                        you. The game thinks it's a <code>640x480</code> window, but really it can be bigger. Mouse
+                        events are scaled for you, so your game doesn't need to do it. Note that <code>SCALED</code> is
+                        considered an experimental API and may change in future releases.</p>
+
+                    <p>The flags argument controls which type of display you want. There are several to choose from, and
+                        you can even combine multiple types using the bitwise or operator, (the pipe "|" character).
+                        Here are the display flags you will want to choose from:</p>
+
+                    <pre>
+                        <code class="language-plaintext">
+pygame.FULLSCREEN # create a fullscreen display
+pygame.DOUBLEBUF # only applicable with OPENGL
+pygame.HWSURFACE # (obsolete in pygame 2) hardware accelerated, only in FULLSCREEN
+pygame.OPENGL # create an OpenGL-renderable display
+pygame.RESIZABLE # display window should be sizeable
+pygame.NOFRAME # display window will have no border or controls
+pygame.SCALED # resolution depends on desktop size and scale graphics
+pygame.SHOWN # window is opened in visible mode (default)
+pygame.HIDDEN # window is opened in hidden mode
+                        </code>
+                    </pre>
+
+                    <p>New in pygame-ce 2.0.0: <code>SCALED</code>, <code>SCALED</code> and <code>HIDDEN</code></p>
+
+                    <p>By setting the <code>vsync</code> parameter to <code>1</code>, it is possible to get a display
+                        with vertical sync at a constant frame rate. Subsequent calls to
+                        <code>pygame.display.flip()</code> Update the full display Surface to the screen will block
+                        (i.e. wait) until the screen has refreshed. Be careful when using this feature together with
+                        <code>pygame.time.Clock</code> or <code>pygame.time.delay()</code> pause the program for an
+                        amount of time, as multiple forms of waiting and frame rate limiting may interact to cause
+                        skipped frames.</p>
+
+                    <p>The request only works when graphics acceleration is available on the system. The exact behaviour
+                        depends on the hardware and driver configuration. When vsync is requested, but unavailable,
+                        <code>set_mode()</code> may raise an exception.</p>
+
+                    <p>Setting the <code>vsync</code> parameter to <code>-1</code> in conjunction with
+                        <code>OPENGL</code> will request the OpenGL-specific feature "adaptive vsync".</p>
+
+                    <p>Here is an example usage of a call to <code>set_mode()</code> that may give you a display with
+                        <code>vsync</code>:</p>
+
+                    <pre><code class="language-python">
+flags = pygame.OPENGL | pygame.FULLSCREEN
+try:
+    window_surface = pygame.display.set_mode((1920, 1080), flags, vsync=1)
+    vsync_success=True
+except pygame.error:
+    window_surface = pygame.display.set_mode((1920, 1080), flags)
+    vsync_success=False
+                    </code>
+                    </pre>
+
+                    <p>New in pygame 2.0.0: <code>vsync</code> parameter</p>
+
+                    <p>Changed in pygame-ce 2.2.0: passing <code>vsync</code> can raise an exception</p>
+
+                    <p>Changed in pygame-ce 2.2.0: explicit request for "adaptive <code>vsync</code>"</p>
+
+                    <p>Changed in pygame-ce 2.2.0: <code>vsync=1</code> does not require <code>SCALED</code> or
+                        <code>OPENGL</code></p>
+
+                    <p>Basic example:</p>
+
+                    <pre><code class="language-python">
+# Open a window on the screen
+screen_width=700
+screen_height=400
+screen=pygame.display.set_mode([screen_width, screen_height])
+The display index 0 means the default display is used. If no display index argument is provided, the default display can be overridden with an environment variable.
+                    </code></pre>
+
+                    <p>Changed in pygame 1.9.5: <code>display</code> argument added</p>
+
+                    <p>Changed in pygame-ce 2.1.3: pygame now ensures that subsequent calls to this function clears the
+                        window to black. On older versions, this was an implementation detail on the major platforms
+                        this function was tested with.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
