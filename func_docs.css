@@ -13,11 +13,23 @@ body{
     background-color: var(--body-background);
     color: var(--font-color);
     font-family: 'Geologica';
+    display: flex;
+    flex-direction: row;
 }
 
-#module-display{
+#nav-menu{
+    /* width: 30%;
+    height: 100%;
+    background-color: var(--menu-background-color); */
+}
+
+#doc-content{
+    width: 100%;
+}
+
+.module-display{
     display: block;
-    margin: 5% 20%;
+    margin: 50px 10%;
 }
 
 #module-desc{
@@ -63,7 +75,7 @@ body{
     margin: 50px 0px;
     padding: 20px;
     background-color: var(--f-documentation-color);
-    border-radius: 40px 10px;
+    border-radius: 10px;
     box-shadow: var(--f-documentation-box-shadow);
 }
 
@@ -77,8 +89,9 @@ body{
 .f-documentation{
     margin: 2em 0em;
     background-color: var(--f-documentation-color);
-    border-radius: 40px 10px;
+    border-radius: 10px;
     box-shadow: var(--f-documentation-box-shadow);
+    border: 1px solid var(--f-documentation-border-color);
 }
 
 .f-desc{
@@ -104,9 +117,9 @@ body{
 }
 
 .f-title-container{
-    padding: 20px;
-    background-color: var(--f-title-container-background);
-    border-radius: 40px 10px 0px 0px;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 1px solid var(--f-documentation-border-color);
 }
 
 .f-tags{
@@ -141,3 +154,11 @@ kbd {
     color: var(--kbd-font-color);
 }
 
+.deprecated{
+    padding: 15px 20px;
+    background-color: var(--deprecated-background-color);
+    border-left: 5px solid var(--deprecated-border-color);
+    font-weight: bolder;
+    width: fit-content;
+    border-radius: 5px 20px 5px 5px;
+}

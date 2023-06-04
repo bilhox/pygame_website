@@ -4,12 +4,15 @@
     --font-color: #FFFFFF;
     --module-title-color: rgb(188, 231, 190);
     --module-member-title-color: rgb(231, 219, 188);
-    --f-title-container-background: #252526;
     --code-member-color: #00000000;
     --non-code-member-color: #121212;
     --f-documentation-color: #2b2b2c;
-    --f-documentation-box-shadow: 0px 0px 30px #0b0b0b;
+    --f-documentation-border-color: #3d3d3d;
+    --f-documentation-box-shadow: 2px 2px 10px #0b0b0b;
     --kbd-background: #323131;
     --kbd-border: #b4b4b4;
     --kbd-font-color: #FFFFFF;
+    --deprecated-background-color: rgb(33, 32, 32);
+    --deprecated-border-color: rgb(174, 174, 174);
+    --menu-background-color:#181818;
 }
