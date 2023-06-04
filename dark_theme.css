@@ -15,4 +15,7 @@
     --deprecated-background-color: rgb(33, 32, 32);
     --deprecated-border-color: rgb(174, 174, 174);
     --menu-background-color:#181818;
+    --menu-module-list-color:#151515;
+    --icon-filter: hue-rotate(0deg) saturate(0%) brightness(100%); 
+    --icon-theme: url("light-theme-icon.svg");
 }
