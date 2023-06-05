@@ -17,7 +17,7 @@
     <div id="nav-menu">
         <div id="page-infos">
             <img src="pygame_tiny.png" alt="pygame-logo">
-            <h2>Documentation</h2>
+            <h2>pygame-ce documentation</h2>
         </div>
         <div id="navigation">
             <button id="input-theme" onclick="changeTheme()"></button>
@@ -180,8 +180,7 @@
                             you can even combine multiple types using the bitwise or operator, (the pipe "|" character).
                             Here are the display flags you will want to choose from:</p>
     
-                        <pre>
-                            <code class="language-plaintext">pygame.FULLSCREEN # create a fullscreen display
+                        <pre class="language-plaintext"><code class="code-sample">pygame.FULLSCREEN # create a fullscreen display
 pygame.DOUBLEBUF # only applicable with OPENGL
 pygame.HWSURFACE # (obsolete in pygame 2) hardware accelerated, only in FULLSCREEN
 pygame.OPENGL # create an OpenGL-renderable display
@@ -189,8 +188,7 @@ pygame.RESIZABLE # display window should be sizeable
 pygame.NOFRAME # display window will have no border or controls
 pygame.SCALED # resolution depends on desktop size and scale graphics
 pygame.SHOWN # window is opened in visible mode (default)
-pygame.HIDDEN # window is opened in hidden mode</code>
-                        </pre>
+pygame.HIDDEN # window is opened in hidden mode</code></pre>
     
                         <p>New in pygame-ce 2.0.0: <code>SCALED</code>, <code>SCALED</code> and <code>HIDDEN</code></p>
     
@@ -212,7 +210,7 @@ pygame.HIDDEN # window is opened in hidden mode</code>
                         <p>Here is an example usage of a call to <code>set_mode()</code> that may give you a display with
                             <code>vsync</code>:</p>
     
-                        <pre><code class="language-python">flags = pygame.OPENGL | pygame.FULLSCREEN
+                        <pre class="language-python"><code class="code-sample">flags = pygame.OPENGL | pygame.FULLSCREEN
 try:
     window_surface = pygame.display.set_mode((1920, 1080), flags, vsync=1)
     vsync_success=True
@@ -232,7 +230,7 @@ except pygame.error:
     
                         <p>Basic example:</p>
     
-                        <pre><code class="language-python"># Open a window on the screen
+                        <pre class="language-python"><code class="code-sample"># Open a window on the screen
 screen_width=700
 screen_height=400
 screen=pygame.display.set_mode([screen_width, screen_height])
