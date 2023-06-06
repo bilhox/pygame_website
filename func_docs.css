@@ -246,12 +246,15 @@ kbd {
 
 .deprecated{
     border-left: 5px solid var(--deprecated-border-color);
+    color: var(--deprecated-border-color);
 }
 
 .new-feature{
     border-left: 5px solid var(--new-border-color);
+    color: var(--new-border-color);
 }
 
 .updated{
     border-left: 5px solid var(--updated-border-color);
+    color: var(--updated-border-color);
 }
