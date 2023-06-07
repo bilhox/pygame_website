@@ -74,7 +74,6 @@ required).
    is used. The systems with multiple choices are listed here.
 
    ::
-
       Windows : windib, directx
       Unix    : x11, dga, fbcon, directfb, ggi, vgl, svgalib, aalib
 

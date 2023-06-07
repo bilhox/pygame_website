@@ -191,7 +191,7 @@ pygame.SHOWN # window is opened in visible mode (default)
 pygame.HIDDEN # window is opened in hidden mode</code></pre>
                         
                         <div class="new-feature">
-                            <p>New in pygame-ce 2.0.0: <code>SCALED</code>, <code>SCALED</code> and <code>HIDDEN</code></p>
+                            <p><u>New in pygame-ce 2.0.0:</u> <code>SCALED</code>, <code>SCALED</code> and <code>HIDDEN</code></p>
                         </div>
     
                         <p>By setting the <code>vsync</code> parameter to <code>1</code>, it is possible to get a display
@@ -220,26 +220,26 @@ except pygame.error:
     window_surface = pygame.display.set_mode((1920, 1080), flags)
     vsync_success=False</code></pre>
     
-                        <div class="new-feature"><p>New in pygame 2.0.0: <code>vsync</code> parameter</p></div>
+                        <div class="new-feature"><p><u>New in pygame 2.0.0:</u> <code>vsync</code> parameter</p></div>
     
-                        <div class="updated"><p>Changed in pygame-ce 2.2.0: passing <code>vsync</code> can raise an exception</p></div>
+                        <div class="updated"><p><u>Changed in pygame-ce 2.2.0:</u> passing <code>vsync</code> can raise an exception</p></div>
     
-                        <div class="updated"><p>Changed in pygame-ce 2.2.0: explicit request for "adaptive <code>vsync</code>"</p></div>
+                        <div class="updated"><p><u>Changed in pygame-ce 2.2.0:</u> explicit request for "adaptive <code>vsync</code>"</p></div>
     
-                        <div class="updated"><p>Changed in pygame-ce 2.2.0: <code>vsync=1</code> does not require <code>SCALED</code> or
+                        <div class="updated"><p><u>Changed in pygame-ce 2.2.0:</u> <code>vsync=1</code> does not require <code>SCALED</code> or
                             <code>OPENGL</code></p></div>
     
                         <p>Basic example:</p>
     
                         <pre class="language-python"><code class="code-sample"># Open a window on the screen
-screen_width=700
-screen_height=400
+screen_width = 700
+screen_height = 400
 screen=pygame.display.set_mode([screen_width, screen_height])
 The display index 0 means the default display is used. If no display index argument is provided, the default display can be overridden with an environment variable.</code></pre>
     
-                        <div class="updated"><p>Changed in pygame 1.9.5: <code>display</code> argument added</p></div>
+                        <div class="updated"><p><u>Changed in pygame 1.9.5:</u> <code>display</code> argument added</p></div>
     
-                        <div class="updated"><p>Changed in pygame-ce 2.1.3: pygame now ensures that subsequent calls to this function clears the
+                        <div class="updated"><p><u>Changed in pygame-ce 2.1.3:</u> pygame now ensures that subsequent calls to this function clears the
                             window to black. On older versions, this was an implementation detail on the major platforms
                             this function was tested with.</p></div>
                     </div>
