@@ -54,19 +54,19 @@
     automatic stretching of the pygame display on Microsoft Windows (Vista or newer
     required).
     </description>
-    <!-- <class>
+    <member type="class">
         <name>pygame.sprite.Sprite</name>
         <short-description>This is a short description</short-description>
         <prototype>prototype -> None</prototype>
         <description>Osef</description>
-        <member>
+        <member type="function">
             <name>draw</name>
             <short-description>This is another short description</short-description>
             <prototype>prototype -> None</prototype>
             <description>None</description>
         </member>
-    </class> -->
-    <member>
+    </member>
+    <member type="function">
         <name>pygame.display.init()</name>
         <short-description>Initialize the display module</short-description>
         <prototype>init() -> None</prototype>
@@ -95,7 +95,7 @@
         It is harmless to call this more than once, repeated calls have no effect.
         </description>
     </member>
-    <member>
+    <member type="function">
         <name>pygame.display.set_mode()</name>
         <short-description>Initialize a window or screen for display</short-description>
         <prototype>set_mode(size=(0, 0), flags=0, depth=0, display=0, vsync=0) -> Surface</prototype>

@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import pathlib
 
 PYGAME_CE_START_VERSION = 0b000000100000000100000011
 
@@ -11,6 +12,9 @@ def pygame_name(version : str) -> bool:
     return "pygame" if byte_version < PYGAME_CE_START_VERSION else "pygame-ce"
 
 def parse_description(raw_content : str) -> str:
+    """
+    TODO: Switch to an XML tree using xml.etree.ElementTree
+    """
     index = raw_content.find("```")
     tag_end = False
     while index != -1:
@@ -97,7 +101,7 @@ def find_with_tag_and_class(node : ET.Element, tag : str, classname : str) -> ET
         if nod.attrib["class"] == classname:
             return nod
 
-def load_node(node : ET.Element, doc_node : ET.Element, parent : ET.Element, doc_parent : ET.Element) -> None:
+def load_node(node : ET.Element, doc_node : ET.Element, parent : ET.Element, doc_parent : ET.Element, page_name : str) -> None:
 
     if not doc_parent:
         node.tag = "div"
@@ -128,7 +132,7 @@ def load_node(node : ET.Element, doc_node : ET.Element, parent : ET.Element, doc
 
             member_tag = ET.Element("li")
             code_tag = ET.Element("code")
-            prototype_link = ET.Element("a", {"href":f"test.html#{name}"})
+            prototype_link = ET.Element("a", {"href":f"{page_name}.html#{name}"})
             prototype_link.text = name
             code_tag.append(prototype_link)
             member_tag.append(code_tag)
@@ -188,7 +192,7 @@ def load_node(node : ET.Element, doc_node : ET.Element, parent : ET.Element, doc
 
             parent.append(node)
     
-    elif doc_parent.tag == "member":
+    elif doc_parent.tag == "member" and doc_parent.attrib["type"] == "function":
 
         if doc_node.tag == "name":
 
@@ -232,36 +236,43 @@ def load_node(node : ET.Element, doc_node : ET.Element, parent : ET.Element, doc
             m_description.append(node)
 
 
-def generate_doc_content(node : ET.Element, doc_parent : ET.Element, parent : ET.Element) -> ET.Element:
+def generate_doc_content(node : ET.Element, doc_parent : ET.Element, parent : ET.Element, page_name : str) -> ET.Element:
 
     tag_name = ""
     result = ET.Element(tag_name)
 
-    load_node(result, node, parent ,doc_parent)
+    load_node(result, node, parent, doc_parent, page_name)
 
     for sub_node in node:
-        generate_doc_content(sub_node, node, result)
+        if sub_node.attrib.get("type", True) != "class":
+            generate_doc_content(sub_node, node, result, page_name)
 
     return result
 
 
-tree = ET.parse("./ref/display.xml")
+def generate_page(doc_path : pathlib.Path):
 
-docs = tree.getroot()
+    tree = ET.parse(doc_path.as_posix())
 
-r = generate_doc_content(docs, None, None)
+    page_name = doc_path.stem
 
-new_tree = ET.parse("./docs/template.xml")
-body = new_tree.getroot().find("body")
-body.append(r)
-new_tree.write("./generated_pages/test.html", "utf-8")
+    docs = tree.getroot()
 
-lines = []
-with open("./generated_pages/test.html", "r") as reader:
+    r = generate_doc_content(docs, None, None, page_name)
 
-    rlines = reader.readlines()
-    for line in rlines:
-        lines.append(line.replace("/>",">"))
+    new_tree = ET.parse("./docs/template.xml")
+    body = new_tree.getroot().find("body")
+    body.append(r)
+    new_tree.write(f"./generated_pages/{page_name}.html", "utf-8")
 
-with open("./generated_pages/test.html", "w") as writer:
-    writer.writelines(lines)
+    lines = []
+    with open(f"./generated_pages/{page_name}.html", "r") as reader:
+
+        rlines = reader.readlines()
+        for line in rlines:
+            lines.append(line.replace("/>",">"))
+
+    with open(f"./generated_pages/{page_name}.html", "w") as writer:
+        writer.writelines(lines)
+
+generate_page(pathlib.Path("./ref/display.xml"))
