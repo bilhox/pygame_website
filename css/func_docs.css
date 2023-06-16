@@ -100,13 +100,18 @@ body{
     margin: 50px 10%;
 }
 
-#module-desc{
-    margin-bottom: 50px;
+.module-header, .class-header{
+    margin-bottom: 30px;
 }
 
-#module-title{
+.module-title{
     padding: 20px 0px;
     border-bottom: var(--module-title-color) 1px solid;
+}
+
+.class-title{
+    padding: 20px 0px;
+    border-bottom: violet 1px solid;
 }
 
 #modules{
@@ -115,7 +120,7 @@ body{
     background-color: var(--menu-module-list-color);
 }
 
-.module-members{
+.module-members, .class-members{
     line-height: 130%;
 }
 
@@ -140,7 +145,7 @@ ul > li{
     font-size: 17px;
 }
 
-.module-members ul li code a{
+.module-members ul li code a, .class-members ul li code a{
     text-decoration: none;
     color: var(--font-color);
     animation-duration: 200ms;
@@ -155,7 +160,7 @@ ul > li > ul > li{
     font-size: 15px;
 }
 
-.module-documentation{
+.module-description{
     margin: 50px 0px;
     padding: 20px;
     background-color: var(--f-documentation-color);
@@ -163,14 +168,14 @@ ul > li > ul > li{
     box-shadow: var(--f-documentation-box-shadow);
 }
 
-.module-documentation code{
+.module-description code{
     background-color: var(--non-code-member-color);
     border-radius: 5px;
     padding: 1px 3px;
     font-size: 14px;
 }
 
-.f-documentation{
+.m-documentation{
     margin: 2em 0em;
     background-color: var(--f-documentation-color);
     border-radius: 10px;
@@ -178,51 +183,47 @@ ul > li > ul > li{
     border: 1px solid var(--f-documentation-border-color);
 }
 
-.f-desc{
+.m-desc{
     font-size: 14px;
     line-height: 140%;
 }
 
-.f-desc .code-sample{
+.m-desc .code-sample{
     background-color: var(--code-sample-background-color);
 }
 
-.f-desc code:not(.code-sample){
+.m-desc code:not(.code-sample){
     background-color: var(--non-code-member-color);
     border-radius: 2px;
     padding: 1px 3px;
 }
 
-.f-description{
+.m-description{
     padding: 10px 20px;
 }
 
-.f-doctype{
+.m-doctype{
     font-size: 15px;
     padding: 1px 3px;
     border-radius: 4px;
     /* background-color: var(--non-code-member-color); */
 }
 
-.f-title-container{
+.m-title-container{
     padding: 15px 20px;
     border-radius: 10px 10px 0px 0px;
     border-bottom: 1px solid var(--f-documentation-border-color);
 }
 
-.f-tags{
-    margin-top: 10px;
+.m-short-description{
+    font-weight: bold;
 }
 
-.f-tags kbd{
-    margin: 0px 2px;
-}
-
-.f-short-documentation {
+.m-short-documentation {
     letter-spacing: 1px;
 }
 
-.f-title-container code{
+.m-title-container code{
     font-size: 20px;
     letter-spacing: 2px;
     background-color: var(--code-member-color);

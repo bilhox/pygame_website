@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link id="theme" rel="stylesheet" href="../css/dark_theme.css"/>
+    <link rel="stylesheet" href="../css/func_docs.css"/>
+    <link id="code-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js">// auto-generated</script>
+    <script src="../js/script.js">// auto--generated</script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-menu">
+        <div id="page-infos">
+            <img src="../assets/pygame_tiny.png" alt="pygame-logo"/>
+            <h2>pygame-ce documentation</h2>
+        </div>
+        <div id="navigation">
+            <button id="input-theme" onclick="changeTheme()"> </button>
+            <form action="#">
+                <input id="input-bar" type="text"/>
+                <input id="input-submit" type="image" value="" src="../assets/searchbar-icon.svg"/>
+            </form>
+        </div>
+        <div id="modules">
+            <ul>
+                <li>module1
+                    <ul>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                    </ul>
+                </li>
+                <li>module2
+                    <ul>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                    </ul>
+                </li>
+                <li>module3
+                    <ul>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                    </ul>
+                </li>
+                <li>module4
+                    <ul>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                    </ul>
+                </li>
+                <li>module5
+                    <ul>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                        <li>Class</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -5,8 +5,8 @@ var theme = "dark";
 const code_dark_theme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css";
 const code_light_theme = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css";
 
-const light_theme = "light_theme.css";
-const dark_theme = "dark_theme.css";
+const light_theme = "../css/light_theme.css";
+const dark_theme = "../css/dark_theme.css";
 
 function changeTheme(){
     if(theme == "dark"){

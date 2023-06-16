@@ -76,8 +76,8 @@
     <div id="doc-content">
         <div class="module-display">
             <!-- <button onclick="changeTheme()">Change theme</button> -->
-            <div id="module-desc">
-                <h1 id="module-title">
+            <div class="module-header">
+                <h1 class="module-title">
                     pygame.display
                 </h1>
                 <p>
@@ -85,7 +85,7 @@
                 </p>
             </div>
             <div class="module-members">
-                <h3 id="module-members-title">Module members</h3>
+                <h3 class="module-members-title">Module members</h3>
                 <ul>
                     <li><code><a href="func_docs.html#pygame.display.quit">pygame.display.quit()</a></code>
                         <ul><li>Uninitialize the display module</li></ul>
@@ -95,7 +95,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="module-documentation">
+            <div class="module-description">
                 <p>This module offers control over the pygame display. Pygame has a single display Surface that is either contained in a window or runs full screen. Once you create the display you treat it as a regular Surface. Changes are not immediately visible onscreen; you must choose one of the two flipping functions to update the actual display.</p>
     
                 <p>The origin of the display, where <code>x = 0</code> and <code>y = 0</code>, is the top left of the screen. Both axes increase positively towards the bottom right of the screen.</p>
@@ -114,19 +114,61 @@
     
                 <p>Some display environments have an option for automatically stretching all windows. When this option is enabled, this automatic stretching distorts the appearance of the pygame window. In the pygame examples directory, there is example code (<code>prevent_display_stretching.py</code>) which shows how to disable this automatic stretching of the pygame display on Microsoft Windows (Vista or newer required).</p>
             </div>
-            <div class="f-documentation">
-                <div class="f-title-container" id="pygame.display.quit">
-                    <code class="member-code">
+
+            <div class="class-documentation">
+                <div class="class-header">
+                    <h2 class="class-title">
+                        pygame.sprite.Sprite
+                    </h2>
+                    <p>
+                        pygame class for something I don't remember
+                    </p>
+                </div>
+                <div class="class-members">
+                    <h3 class="class-members-title">Class members</h3>
+                    <ul>
+                        <li><code><a href="#">pygame.sprite.Sprite.draw()</a></code>
+                            <ul><li>To draw</li></ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="class-description">
+                    <p>This class is just here as example</p>
+                </div>
+                <div class="m-documentation">
+                    <div class="m-title-container" id="pygame.display.quit">
+                        <code class="m-code">
+                            pygame.display.quit()
+                        </code>
+                    </div>
+                    <div class="m-description">
+                        <div class="deprecated">
+                            <p>Deprecated since pygame X.Y.Z</p>
+                        </div>
+                        <p class="m-short-description">Uninitialize the display module</p>
+                        <pre class="language-python"><code class="m-doctype">quit() -> None</code></pre>
+                        <div class="m-desc">
+                            <p>This will shut down the entire display module. This means any active displays will be closed.
+                                This will also be handled automatically when the program exits.</p>
+                            <p>It is harmless to call this more than once, repeated calls have no effect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-documentation">
+                <div class="m-title-container" id="pygame.display.quit">
+                    <code class="m-code">
                         pygame.display.quit()
                     </code>
                 </div>
-                <div class="f-description">
+                <div class="m-description">
                     <div class="deprecated">
                         <p>Deprecated since pygame X.Y.Z</p>
                     </div>
-                    <p class="f-short-description"><strong>Uninitialize the display module</strong></p>
-                    <pre class="language-python"><code class="f-doctype">quit() -> None</code></pre>
-                    <div class="f-desc">
+                    <p class="m-short-description">Uninitialize the display module</p>
+                    <pre class="language-python"><code class="m-doctype">quit() -> None</code></pre>
+                    <div class="m-desc">
                         <p>This will shut down the entire display module. This means any active displays will be closed.
                             This will also be handled automatically when the program exits.</p>
                         <p>It is harmless to call this more than once, repeated calls have no effect.</p>
@@ -134,16 +176,16 @@
                 </div>
             </div>
     
-            <div class="f-documentation">
-                <div class="f-title-container" id="pygame.display.set_mode">
-                    <code class="member-code">
+            <div class="m-documentation">
+                <div class="m-title-container" id="pygame.display.set_mode">
+                    <code class="m-code">
                         pygame.display.set_mode()
                     </code>
                 </div>
-                <div class="f-description">
-                    <p class="f-short-description"><strong>Initialize a window or screen for display</strong></p>
-                    <pre class="language-python"><code class="f-doctype">set_mode(size=(0, 0), flags=0, depth=0, display=0, vsync=0) -> Surface</code></pre>
-                    <div class="f-desc">
+                <div class="m-description">
+                    <p class="m-short-description">Initialize a window or screen for display</p>
+                    <pre class="language-python"><code class="m-doctype">set_mode(size=(0, 0), flags=0, depth=0, display=0, vsync=0) -> Surface</code></pre>
+                    <div class="m-desc">
                         <p> This will create a window or display output and return a display Surface. The arguments passed
                             in are requests for a display type. The actual created display will be the best possible match
                             supported by the system.</p>

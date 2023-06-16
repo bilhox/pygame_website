@@ -19,6 +19,6 @@
     --menu-background-color:#181818;
     --menu-module-list-color:#151515;
     --icon-filter: hue-rotate(0deg) saturate(0%) brightness(100%); 
-    --icon-theme: url("./assets/light-theme-icon.svg");
+    --icon-theme: url("../assets/light-theme-icon.svg");
     --code-sample-background-color: #2c2630;
 }
